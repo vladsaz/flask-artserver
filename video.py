@@ -3,9 +3,9 @@ import cv2
 class Video(object):
     def __init__(self):
         #webcam
-        # self.video = cv2.VideoCapture(0)
+        self.video = cv2.VideoCapture(0)
         #video
-        self.video = cv2.VideoCapture('images/small.mp4')
+        # self.video = cv2.VideoCapture('images/small.mp4')
     
     def __del__(self):
         self.video.release()
