@@ -12,6 +12,13 @@
             "imageSubtitle": "Dog Breed",
             "imageURL": "http://cdn2-www.dogtime.com/assets/uploads/gallery/german-shepherd-dog-breed-pictures/standing-7.jpg",
             "imageDescription": "The German Shepherd is a breed of medium to large-sized working dog that originated in Germany. The breed's officially recognized name is German Shepherd Dog in the English language. The breed was once known as the Alsatian in Britain and Ireland."
+        },
+        {
+            "imageID": "3",
+            "imageTitle": "Pug",
+            "imageSubtitle": "Dog Breed",
+            "imageURL": "http://cdn2-www.dogtime.com/assets/uploads/gallery/pug-dog-breed-pictures/2-face.jpg",
+            "imageDescription": "The Pug is a breed of dog with physically distinctive features of a wrinkly, short-muzzled face, and curled tail."
         }
     ]
 }

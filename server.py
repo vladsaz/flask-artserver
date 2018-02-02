@@ -1,6 +1,6 @@
 from flask import Flask, render_template, make_response, Response, jsonify
 from video import Video
-import json
+import json, base64
 
 
 app = Flask(__name__)
@@ -36,6 +36,15 @@ def video_feed():
 def dogs():
     resp = make_response(open('data/dogs.json', 'rb').read())
     resp.headers['Access-Control-Allow-Origin'] = '*'
+    return resp
+
+@app.route('/base64')
+def to_base():
+    my_file = open('images/img1.png', 'rb').read()
+    encoded_file = base64.b64encode(my_file).decode('ascii')
+    resp = make_response(encoded_file)
+    resp.headers['Access-Control-Allow-Origin'] = '*'
+    
     return resp
 
 
