@@ -1,8 +1,9 @@
-from flask import Flask, render_template, make_response, Response
+from flask import Flask, render_template, make_response, Response, jsonify
 from video import Video
+import json
+
 
 app = Flask(__name__)
-
 
 def gen(video):
     while True:
@@ -29,6 +30,14 @@ def video_feed():
                     mimetype='multipart/x-mixed-replace; boundary=frame')
     resp.headers['Access-Control-Allow-Origin'] = '*'
     return resp
+
+
+@app.route('/dogs')
+def dogs():
+    resp = make_response(open('data/dogs.json', 'rb').read())
+    resp.headers['Access-Control-Allow-Origin'] = '*'
+    return resp
+
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0')
